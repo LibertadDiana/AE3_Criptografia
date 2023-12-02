@@ -1,5 +1,8 @@
 # AE-3: Criptografía
 
+![1](https://github.com/LibertadDiana/AE3_Criptografia/assets/124418682/13ff20bc-77f1-416b-91a5-d745ddac3049)
+
+
 # Programación de Servicios y Procesos 
  
 # Grupo  : 
