@@ -75,3 +75,8 @@ Desencriptar Frase:
 ![4](https://github.com/LibertadDiana/AE3_Criptografia/assets/124418682/54dab6f7-48fe-46ca-a9b0-de3076717401)
 
 # Conclusión. 
+
+La tarea requería la creación de una aplicación de consola en Java que ofreciera encriptación y desencriptación de frases utilizando un método simétrico junto con un sistema de autenticación de usuarios.
+
+Realizar esta actividad nos proporcionó la oportunidad de trabajar con entrada de usuario, lógica de encriptación y lógica de control de flujo para la autenticación. Además de seguridad y enfoques para manejar datos sensibles como contraseñas.
+
