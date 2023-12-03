@@ -52,6 +52,7 @@ Encriptar Frase:
  La frase encriptada se almacena en memoria.
  
 ![1 2](https://github.com/LibertadDiana/AE3_Criptografia/assets/124418682/d680e997-d87b-40fd-abb7-37df06e79f59)
+
 Desencriptar Frase:
  El programa muestra la última frase encriptada y la desencripta.
  
