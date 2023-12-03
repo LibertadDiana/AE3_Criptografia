@@ -45,28 +45,32 @@ Antes de mostrar el menú, el programa pedirá que se introduzca el nombre del u
  Encriptar una frase ingresada por el usuario.
  Desencriptar la última frase encriptada.
 
-
+![1 1](https://github.com/LibertadDiana/AE3_Criptografia/assets/124418682/88758a67-d72f-4b3a-b2eb-3e45c4cbcc13)
 
 Encriptar Frase:
  El programa solicita al usuario una frase y la encripta.
  La frase encriptada se almacena en memoria.
-
-
+ 
+![1 2](https://github.com/LibertadDiana/AE3_Criptografia/assets/124418682/d680e997-d87b-40fd-abb7-37df06e79f59)
 Desencriptar Frase:
  El programa muestra la última frase encriptada y la desencripta.
-
+ 
+![1 3](https://github.com/LibertadDiana/AE3_Criptografia/assets/124418682/4d0711e4-24dd-463f-aa7f-20a9120bbacd)
 
 
 # Requerimiento 2: Seguridad de Acceso
  Autenticación de Usuarios:
  Al iniciar el programa, se solicita al usuario ingresar su nombre de usuario y contraseña. El sistema  
  verifica estos datos con una lista predefinida de usuarios y contraseñas.
-
+ 
+![1](https://github.com/LibertadDiana/AE3_Criptografia/assets/124418682/9a27dbca-d290-4ac4-afe3-18dd5988c996)
 
  Si los datos coinciden, se da acceso al programa y se muestra el menú.
-
+ 
+![2](https://github.com/LibertadDiana/AE3_Criptografia/assets/124418682/04f72396-7816-4052-b9b2-5a66f37e7d6e)
 
  Si los datos son incorrectos, se permite un máximo de tres intentos para ingresar correctamente.
-
+ 
+![4](https://github.com/LibertadDiana/AE3_Criptografia/assets/124418682/54dab6f7-48fe-46ca-a9b0-de3076717401)
 
 # Conclusión. 
