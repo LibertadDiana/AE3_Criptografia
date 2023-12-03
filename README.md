@@ -5,57 +5,24 @@
 
 # Programación de Servicios y Procesos 
  
-# Grupo  : 
+# Grupo 2 : 
 Cristian David Quiceno Laverde 
 Gabriela Prieto Herrera 
 Libertad Gamarra La Rosa 
  
 # Repositorio Git:
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
+https://github.com/LibertadDiana/AE3_Criptografia.git 
 
 # Metodología. 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+Teniendo en cuenta la importancia de los conceptos de esta actividad, hemos decidido que para esta actividad que cada miembro del grupo realice el proyecto de criptografía de la manera que crea más correcta, creando así 3 proyectos con diferentes metodologías. 
 
+Para realizar los proyectos se han tenido en cuenta las clases y los ejemplos mostrados en las mismas, llevando estas especificaciones a los diferentes proyectos planteados por el grupo.
+Basando la composición en los métodos de encriptación y desencriptación, más la realización de resúmenes hash, de los contenidos que se especifican en la actividad.
 
+Una vez terminados los proyectos, en reunión grupal se han expuesto los diferentes casos y sus conclusiones. Se han comprobado los diferentes códigos con sus diferencias y se han depurado los detalles del proyecto elegido por el grupo para presentarlo como el proyecto principal.
 
-
-
-
-
-
- 
- 
 # Enunciado. 
+
 # Requerimiento 1
 Se pide hacer una aplicación que encripte frases introducidas por el usuario de manera simétrica.
 La aplicación mostrará el siguiente menú
@@ -72,38 +39,34 @@ Antes de mostrar el menú, el programa pedirá que se introduzca el nombre del u
 
 # Contenido
 
+# Requerimiento 1: Encriptar y Desencriptar Frases
+ Menú de Opciones:
+ Salir del programa.
+ Encriptar una frase ingresada por el usuario.
+ Desencriptar la última frase encriptada.
 
 
 
+Encriptar Frase:
+ El programa solicita al usuario una frase y la encripta.
+ La frase encriptada se almacena en memoria.
+
+
+Desencriptar Frase:
+ El programa muestra la última frase encriptada y la desencripta.
 
 
 
+# Requerimiento 2: Seguridad de Acceso
+ Autenticación de Usuarios:
+ Al iniciar el programa, se solicita al usuario ingresar su nombre de usuario y contraseña. El sistema  
+ verifica estos datos con una lista predefinida de usuarios y contraseñas.
 
 
-
-. 
-
+ Si los datos coinciden, se da acceso al programa y se muestra el menú.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ Si los datos son incorrectos, se permite un máximo de tres intentos para ingresar correctamente.
 
 
 # Conclusión. 
