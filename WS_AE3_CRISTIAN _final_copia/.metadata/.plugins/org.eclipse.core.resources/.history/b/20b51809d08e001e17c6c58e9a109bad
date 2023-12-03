@@ -1,0 +1,15 @@
+package es.cristian.controlador;
+
+import es.cristian.modelo.entidad.Encriptador;
+
+public class Controlador {
+	private Encriptador encriptador;
+	
+	//Constructor que inicializa los atributos.
+	public Controlador() {
+		this.encriptador = new Encriptador();
+	}
+	
+	metodos para hacer aquí el añadido y enseñar el mesaje
+	o lo hago desde DAO?
+}

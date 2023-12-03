@@ -1,0 +1,79 @@
+package es.cristian.modelo.entidad;
+
+import java.security.GeneralSecurityException;
+
+import javax.crypto.Cipher;
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
+
+public class Encriptar {
+	
+	private SecretKey clave;
+	private Cipher cifrador;
+	
+	public Encriptar() {
+		try {
+			//Generador de claves simétricas
+			KeyGenerator generador = KeyGenerator.getInstance("AES");
+			//se genera la clave
+			 clave = generador.generateKey();
+			//Objeto que permite encriptar, se configura en modo encriptar.
+			 cifrador = Cipher.getInstance("AES");
+		}catch(GeneralSecurityException gse){
+			System.out.println("Algo ha fallado..." + gse.getMessage());
+			gse.printStackTrace();
+			
+		}
+		
+	}
+	
+		
+	
+		
+		
+		public String encriptar (String mensajeOriginal) {
+			String mensajeCifrado = null;
+			try {
+				
+				
+				cifrador.init(Cipher.ENCRYPT_MODE, clave);
+				
+				byte[] bytesMensajeOriginal = mensajeOriginal.getBytes();
+				
+				byte[] byteMensajeCifrado = cifrador.doFinal(bytesMensajeOriginal);
+				
+				mensajeCifrado = new String(byteMensajeCifrado);
+				
+				//Esto lo guardo en memoria??? en DAO??
+			}catch(GeneralSecurityException gse){
+				System.out.println("Algo ha fallado..." + gse.getMessage());
+				gse.printStackTrace();
+				
+			}
+			return  mensajeCifrado;
+		}
+		
+		public String desencriptar (String mensajeCifrado) {
+			
+			//Este emnsaje cifrado lo tendra que elegir el usuario desde la BBDD
+			//a través del controldor.
+			String mensajeDescifrado = null;
+			
+			try {
+				cifrador = Cipher.getInstance("AES");
+				cifrador.init(Cipher.DECRYPT_MODE, clave);
+				
+				byte[] bytesMensajeCifrado = mensajeCifrado.getBytes();
+				byte[] bytesMensajeDescifrado = cifrador.doFinal(bytesMensajeCifrado);
+				
+				mensajeDescifrado = new String(bytesMensajeDescifrado);
+			
+			}catch(GeneralSecurityException gse){
+				System.out.println("Algo ha fallado..." + gse.getMessage());
+				gse.printStackTrace();
+			}
+			return mensajeDescifrado;
+		}
+}
+			
+			

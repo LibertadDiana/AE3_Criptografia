@@ -1,0 +1,94 @@
+package es.cristian.modelo.persistencia;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import es.cristian.modelo.entidad.User;
+
+public class DaoUser {
+	
+	private List <User> userList;
+	
+	private String u1, u2, u3, p1, p2, p3;
+	
+	
+	
+	//private byte[] p1, p2, p3;
+	
+	public DaoUser() {
+		
+		
+		
+		//Estaba intentando creando aquí todo el hasheador
+		/*
+		 * p1 = "PlayboyDeHierro".getBytes();
+		p2 = "ViejoVerde".getBytes();
+		p3 = "BlackBlackWidow".getBytes();
+		
+		MessageDigest md =
+		 */
+		
+		
+		userList = new ArrayList<User>();
+		
+		/*
+		 * User u1 = new User("Tony","" );
+		User u2 = new User("Hulk", "");
+		User u3 = new User("Dominó", "");
+		userList.add(u1);
+		userList.add(u2);
+		userList.add(u3);
+		 */
+		
+	}
+
+	public void add(User u) {
+		p1 = "PlayboyDeHierro";
+		p2 = "ViejoVerde";
+		p3 = "BlackBlackWidow";
+		
+		u1 = "Ironman";
+		u2 = "Hulk";
+		u3 = "Dominó";
+		
+		userList.add(u1);
+		
+	}
+
+	public String getP1() {
+		return p1;
+	}
+
+
+
+	public void setP1(String p1) {
+		this.p1 = p1;
+	}
+
+
+
+	public String getP2() {
+		return p2;
+	}
+
+
+
+	public void setP2(String p2) {
+		this.p2 = p2;
+	}
+
+
+
+	public String getP3() {
+		return p3;
+	}
+
+
+
+	public void setP3(String p3) {
+		this.p3 = p3;
+	}
+	
+	
+	
+}

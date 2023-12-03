@@ -1,0 +1,21 @@
+package es.cristian.modelo.persistencia;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import es.cristian.modelo.entidad.User;
+
+public class DaoUser {
+	
+	private List <User> userList;
+	
+	public DaoUser() {
+		userList = new ArrayList<User>();
+		User u1 = new User("Tony", "PlayboyDeHierro");
+		User u2 = new User("Hulk", "ViejoVerde");
+		User u3 = new User("Dominó", "BlackBlackWidow");
+		userList.add(u1);
+		userList.add(u2);
+		userList.add(u3);
+	}
+}

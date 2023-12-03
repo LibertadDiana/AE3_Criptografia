@@ -1,0 +1,39 @@
+package es.cristian.controlador;
+
+import es.cristian.modelo.entidad.Encriptador;
+
+public class Controlador {
+	private Encriptador encriptador;
+	
+	//Constructor que inicializa los atributos.
+	public Controlador() {
+		this.encriptador = new Encriptador();
+	}
+	
+	public String encriptar(String mensaje) {
+		return encriptador.encriptar(mensaje);
+	}
+	
+	/*
+	 * Le tengo que pasar uno de los mensajes descifrados que elija 
+	 * y estén guardados
+	 * 
+	 * 
+	 * 1.clase + DAO
+	 * 2. controlador: método para add un mensaje al array
+	 * 3. controlador: método para elegir un mensaje del array
+	 * 4. una vez elegido lo paso por param del método desencriptar
+
+	 */
+	public String desencriptar(String mensajeDescifrado) {
+		return encriptador.desencriptar(mensajeDescifrado);
+	}
+	
+	
+	
+	/*
+	 * metodos para hacer aquí el añadido y enseñar el mesaje
+	o lo hago desde DAO?
+	 */
+	
+}

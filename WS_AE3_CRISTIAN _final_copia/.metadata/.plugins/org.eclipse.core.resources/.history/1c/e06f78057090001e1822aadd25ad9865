@@ -1,0 +1,117 @@
+package es.cristian.vista;
+
+import java.util.Scanner;
+
+import es.cristian.controlador.Controlador;
+import es.cristian.modelo.entidad.Encriptador;
+import es.cristian.modelo.entidad.MensajeEncriptado;
+import es.cristian.modelo.persistencia.DaoMensajeEncriptado;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		//Encriptador encriptar = new Encriptador();
+		Controlador controlador = new Controlador();
+		//DaoMensajeEncriptado daoMensaje = new DaoMensajeEncriptado();
+		//MensajeEncriptado mEncriptado = new MensajeEncriptado();
+		
+		Scanner sc = new Scanner(System.in);
+		
+		/*
+		 * Bucle general para aportar 3 oportunidades al usuario.
+		 * SI falla 3 oprotunidades, se finaliza el programa.
+		 */
+		
+		int oportunidades = 0;
+		while(oportunidades <= 3) {
+			System.out.println("Introduce tu usuario: ");
+			String user = sc.nextLine();
+			System.out.println("introduce tu contraseña: ");
+			String pswd = sc.nextLine();
+		
+		
+		
+		
+		
+		boolean correcto = controlador.confirmUser(user, pswd);
+		
+		while(correcto == true) {
+			
+			System.out.println("Bienvenid@ " + user);
+
+			String choice = "";
+			boolean continuar = true;
+			do {
+				System.out.println("Menú de opciones\nElige un número:");
+				System.out.println("1. Salir del programa.");
+				System.out.println("2. Encriptar frase.");
+				System.out.println("3. Desencriptar frase.");
+				
+				choice = sc.nextLine();
+				
+				try { //Se asegura de recibir un número.
+					int election = Integer.parseInt(choice); 
+					
+					if(election == 1) {
+						System.out.println("Has elegido salir del programa.");
+						continuar = false;
+					}else if(election == 2) {
+						System.out.println("Qué mensaje quieres encriptar?");
+						String mensaje = sc.nextLine();
+						controlador.encriptar(mensaje);
+						
+						MensajeEncriptado mEncriptado = new MensajeEncriptado();
+						//Mediante el objeto, le paso el mensaje(único artibuto) al nuevo libro creado
+						//en el método del controlador addMensaje, que a su vez, lo crea
+						//en daoMensajeEncriptado.
+						mEncriptado.setMensaje(mensaje);
+						controlador.addMensaje(mEncriptado);
+						
+						System.out.println("Listado de mensajes encriptados: ");
+						System.out.println(controlador.listarMensaje());
+					}else if(election == 3) {
+						System.out.println("Elige uno de los siguientes mensajes mediante su ID para desencriptarlo");
+						System.out.println(controlador.listarMensaje());
+						int eleccion = Integer.parseInt(sc.nextLine());
+						
+						/*
+						 * Election(ID elegido) lo paso por el meétodo getMensaje. Su variable
+						 * La paso por método desencriptar, apra desencriptar el mensaje elegido.
+						 */
+						String mensajeElegido = controlador.getMensaje(eleccion);	
+						String mensajeDesencriptado = controlador.desencriptar(mensajeElegido);
+						System.out.println(mensajeDesencriptado);
+					}
+				}catch(NumberFormatException e) {
+					System.out.println("La elección no es un número válido, vuelve a intentarlo.");
+				}
+			
+			}while(continuar);
+			
+			
+			/*
+			 * 
+			
+			
+			
+			//2 y 3.
+			//posicion? pedirla
+			String mensajeElegido = controlador.getMensaje(posicion??);
+			String mensajeDesencriptado = controlador.desencriptar(mensajeCifrado);
+			
+			//ESTOY AQUÍ. PINTAR EL MENÚ -aquí o en controlador?-
+			//y relacionarlo con los métodos de controlador.
+			//Estoy usando AE2 de PSP y criptografía.
+			 */
+		}
+		System.out.println("Usuario o contraseña incorrectos. Inténtalo de nuevo: ");
+		oportunidades++;
+	
+	}
+		System.out.println("¡Acceso denegado!");
+		
+		
+		sc.close();
+ }
+}

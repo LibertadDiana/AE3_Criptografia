@@ -1,0 +1,67 @@
+package es.cristian.modelo.entidad;
+
+import java.security.GeneralSecurityException;
+
+import javax.crypto.Cipher;
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
+
+public class Encriptar {
+	
+	//Generador de claves simétricas
+			KeyGenerator generador = KeyGenerator.getInstance("AES");
+			//se genera la clave
+			SecretKey clave = generador.generateKey();
+			//Objeto que permite encriptar, se configura en modo encriptar.
+			Cipher cifrador = Cipher.getInstance("AES");
+	try {
+		
+		
+		public String encriptar (String mensajeOriginal) {
+			String mensajeCifrado = null;
+			try {
+				
+				
+				cifrador.init(Cipher.ENCRYPT_MODE, clave);
+				
+				byte[] bytesMensajeOriginal = mensajeOriginal.getBytes();
+				
+				byte[] byteMensajeCifrado = cifrador.doFinal(bytesMensajeOriginal);
+				
+				mensajeCifrado = new String(byteMensajeCifrado);
+				
+				//Esto lo guardo en memoria??? en DAO??
+			}catch(GeneralSecurityException gse){
+				System.out.println("Algo ha fallado..." + gse.getMessage());
+				gse.printStackTrace();
+				
+			}
+			return  mensajeCifrado;
+		}
+		
+		public String desencriptar (String mensajeCifrado) {
+			
+			//Este emnsaje cifrado lo tendra que elegir el usuario desde la BBDD
+			//a través del controldor.
+			String mensajeDescifrado = null;
+			
+			try {
+				Cipher desCifrador = Cipher.getInstance("AES");
+				desCifrador.init(Cipher.DECRYPT_MODE, clave);
+			}catch(GeneralSecurityException gse){
+				System.out.println("Algo ha fallado..." + gse.getMessage());
+				gse.printStackTrace();
+			}
+		}
+			
+			
+		
+	}catch(GeneralSecurityException gse){
+		System.out.println("Algo ha fallado..." + gse.getMessage());
+		gse.printStackTrace();
+		
+	}
+	
+	
+	
+}

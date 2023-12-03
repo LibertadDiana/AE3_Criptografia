@@ -1,0 +1,41 @@
+package es.cristian.modelo.persistencia;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import es.cristian.modelo.entidad.MensajeEncriptado;
+
+public class DaoMensajeEncriptado {
+
+	public List<MensajeEncriptado> listaMensajes;
+	public int contador;
+	
+	public DaoMensajeEncriptado() {
+		listaMensajes = new ArrayList<MensajeEncriptado>();
+		
+	}
+	
+	//Métodos
+	
+	public MensajeEncriptado get (int posicion) {
+		try {
+			return listaMensajes.get(posicion);
+		} catch (IndexOutOfBoundsException iobe) {
+			System.out.println("Mensaje fuera de rango");
+			return null;
+		}
+	}
+	
+	public boolean add(int posicion) {
+		for(MensajeEncriptado mensaje : listaMensajes) {
+			if(mensaje.getId() == posicion) {
+				return false;
+			}
+		}
+		
+		MensajeEncriptado nuevoMensaje = new MensajeEncriptado();
+		nuevoMensaje.setId(contador++);
+		listaMensajes.add(nuevoMensaje);
+		return true;
+	}
+}

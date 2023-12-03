@@ -1,0 +1,83 @@
+package es.cristian.controlador;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import es.cristian.modelo.entidad.Encriptador;
+import es.cristian.modelo.entidad.MensajeEncriptado;
+import es.cristian.modelo.persistencia.DaoMensajeEncriptado;
+
+public class Controlador {
+	private Encriptador encriptador;
+	private DaoMensajeEncriptado daoMensaje;
+	
+	private String mensajeCifrado = null;
+	private String mensajeElegido = null;
+	
+	//Constructor que inicializa los atributos.
+	public Controlador() {
+		this.encriptador = new Encriptador();
+		this.daoMensaje = new DaoMensajeEncriptado();
+	}
+	
+	//ENcriptar más añadir mensaje al listado.
+	public String encriptar(String mensaje) {
+		mensajeCifrado = encriptador.encriptar(mensaje);
+		return mensajeCifrado;
+		
+	}
+	//controlador: método para add un mensaje al array, relacioando con DAO
+		public void addMensaje(MensajeEncriptado mensajeNuevo) {
+			mensajeNuevo.setMensaje(mensajeCifrado);
+			daoMensaje.add(mensajeNuevo);
+			
+		}
+		
+		//Método para llamar al metodos listar de DAO
+		public List<MensajeEncriptado> listarMensaje(){
+			return daoMensaje.list();
+		}
+	
+	/*
+	 * Le tengo que pasar uno de los mensajes descifrados que elija 
+	 * y estén guardados
+	 * 
+	 * 
+	 * 1.clase + DAO
+	 * 2. controlador: método para elegir un mensaje del array
+	 * 3. una vez elegido lo paso por param del método desencriptar
+	 * 
+
+	 */
+	
+	
+	//2. Elige mediante el método de Dao un elemento del Array
+	//Según el elegido por ID por el usuario.
+	public String getMensaje(int posicion) {
+		
+		List<MensajeEncriptado> listado = daoMensaje.listaMensajes;
+		
+		for(MensajeEncriptado lista : listado) {
+			if(posicion != lista.getId()) {
+				
+			}
+		}
+		
+		/*
+		 * MensajeEncriptado m = daoMensaje.get(posicion);
+		mensajeElegido = m.getMensaje();
+		return mensajeElegido;
+		 */
+		
+	}
+	
+	//3.. Le paso por param el mensajeCifrado desde el Main.
+	public String desencriptar(String mensajeElegido) {
+			
+		return encriptador.desencriptar(mensajeElegido);
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,48 @@
+package es.cristian.modelo.persistencia;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import es.cristian.modelo.entidad.User;
+
+public class DaoUser {
+	
+	private List <User> userList;
+	
+	private String p1, p2, p3;
+	
+	
+	
+	//private byte[] p1, p2, p3;
+	
+	public DaoUser() {
+		
+		p1 = "PlayboyDeHierro";
+		p2 = "ViejoVerde";
+		p3 = "BlackBlackWidow";
+		
+		/*
+		 * p1 = "PlayboyDeHierro".getBytes();
+		p2 = "ViejoVerde".getBytes();
+		p3 = "BlackBlackWidow".getBytes();
+		
+		MessageDigest md =
+		 */
+		
+		
+		userList = new ArrayList<User>();
+		
+		/*
+		 * User u1 = new User("Tony","" );
+		User u2 = new User("Hulk", "");
+		User u3 = new User("Dominó", "");
+		userList.add(u1);
+		userList.add(u2);
+		userList.add(u3);
+		 */
+		
+	}
+	
+	
+	
+}

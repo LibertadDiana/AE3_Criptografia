@@ -1,0 +1,14 @@
+package es.cristian.modelo.entidad;
+
+import javax.crypto.KeyGenerator;
+
+public class Encriptar {
+	try {
+		KeyGenerator generador = KeyGenerator.getInstance("AES");
+		
+		SecretKey clave = generador.generateKey();
+		
+	}catch{
+		
+	}
+}}

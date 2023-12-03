@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="javax.crypto.KeyGenerator"/>
+    <fullyQualifiedTypeName name="javax.crypto.SecretKey"/>
+    <fullyQualifiedTypeName name="javax.crypto.Cipher"/>
+    <fullyQualifiedTypeName name="java.security.GeneralSecurityException"/>
+    <fullyQualifiedTypeName name="es.cristian.modelo.persistencia.DaoMensajesEncriptados"/>
+    <fullyQualifiedTypeName name="es.cristian.modelo.entidad.MensajesEncriptados"/>
+    <fullyQualifiedTypeName name="es.cristian.controlador.Controlador"/>
+    <fullyQualifiedTypeName name="es.cristian.modelo.entidad.Encriptador"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="es.cristian.modelo.persistencia.DaoMensajeEncriptado"/>
+    <fullyQualifiedTypeName name="es.cristian.modelo.entidad.MensajeEncriptado"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="es.cristian.modelo.entidad.User"/>
+    <fullyQualifiedTypeName name="java.security.MessageDigest"/>
+    <fullyQualifiedTypeName name="java.util.Base64"/>
+    <fullyQualifiedTypeName name="java.security.NoSuchAlgorithmException"/>
+    <fullyQualifiedTypeName name="es.cristian.modelo.entidad.HashConversor"/>
+</qualifiedTypeNameHistroy>
